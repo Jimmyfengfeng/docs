@@ -8,39 +8,37 @@ hero:
     <span
       class="font-black text-transparent
         bg-clip-text bg-gradient-to-b
-        from-accent-700 to-accent-400
-        dark:from-accent-500 dark:to-accent-200"
+        from-green-700 to-green-400
+        dark:from-green-500 dark:to-green-200"
     >
       Teemopay
     </span>
-  tagline: Teemopay 是拉美地区优秀的支付服务提供商!
+  tagline: Teemopay is latin America's leading payment provider!
   image:
-    file: ../../assets/houston.webp
+    file: /src/assets/teemo.png
   actions:
-    - text: 开始接入
-      link: /guides/example
+    - text: Get started
+      link: /en/guides/example
       icon: right-arrow
       variant: primary
-    - text: 开通商户
-      link: https://starlight.astro.build
+    - text: Business
+      link: "/"
       icon: external
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
-
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+    <Card title="Quick and Easy" icon="add-document">
+        Easy-to-use API interface allows you to easily complete the payment process
+    </Card>
+    <Card title="Stable Service" icon="setting">
+        Adopts advanced distributed technology to support high-concurrency payment requests
+    </Card>
+    <Card title="Customer Service" icon="open-book">
+        24/7 stable customer service to make your payment process smoother
+    </Card>
+    <Card title="Documentation" icon="pencil">
+        Written and maintained by product managers and developers together
+    </Card>
 </CardGrid>
