@@ -7,6 +7,12 @@ export default defineConfig({
     // site: process.env.VERCEL_ENV !== 'production' ? "https://docs-teemopay.vercel.app" : "https://docs.teemopay.com",
     integrations: [
         starlight({
+            head: [
+                {
+                    tag: "link",
+                    attrs: {rel: "icon", type: "image/png", href: "/favicon.png"}, // 网站图标
+                }
+            ],
             // 网站左上角标题和右侧 GitHub 链接
             title: 'Teemopay Docs',
             // 用 logo 替换标题
