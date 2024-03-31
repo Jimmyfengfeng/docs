@@ -27,6 +27,7 @@ hero:
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 <CardGrid stagger>
 	<Card title="快速便捷" icon="add-document">
@@ -42,3 +43,4 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
         由产品经理和开发人员共同编撰和维护
     </Card>
 </CardGrid>
+<SpeedInsights />
