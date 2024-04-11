@@ -40,16 +40,16 @@ import Table from "@components/Table.astro";
     ["status", "String", "yes", "2-成功 3-失败 4-退款"],
     ["remark", "String", "no", "商户创建订单传的值"],
     ["statementList", "Object", "no", "代收流水信息"],
-    ["- paymentSingleOrderNo", "String", "yes", "单次支付流水号"],
-    ["- paymentStatementAmount", "String", "yes", "单次代收金额"],
+    ["--paymentSingleOrderNo", "String", "yes", "单次支付流水号"],
+    ["--paymentStatementAmount", "String", "yes", "单次代收金额"],
     [
-      "- paymentStatementStatus",
+      "--paymentStatementStatus",
       "String",
       "yes",
       "单次代收交易状态: 2-代收成功 3-代收失败 4-退款",
     ],
-    ["- paymentStatementStatusName", "String", "yes", "交易状态名称"],
-    ["- message", "String", "no", "交易信息"],
+    ["--paymentStatementStatusName", "String", "yes", "交易状态名称"],
+    ["--message", "String", "no", "交易信息"],
     ["sign", "String", "yes", "签名"],
   ]}
 />
