@@ -3,7 +3,7 @@ title: 鉴权
 description: 鉴权和加密说明
 ---
 
-## 加密方式说明
+### 加密方式说明
 
 - 签名算法: RSA
 - 秘钥长度: 1024 位
@@ -12,7 +12,7 @@ description: 鉴权和加密说明
 说明: 商户接入需先生成商户公钥, 开通商户时生成平台公钥(交换公钥), 平台公钥会发送到商户绑定邮箱,
 商户和平台使用各自的平台私钥进行加签, 各自使用对方公钥进行验签
 
-## 请求头验证&签名规则
+### 请求头验证&签名规则
 
 1. 请求头中必须包含 nonce 和 timestamp
 2. timestamp 如果商户发送当前时间戳和当前平台时间超过 30S, 则认为此请求已过期
@@ -24,19 +24,37 @@ description: 鉴权和加密说明
 
 平台回调商户会进行以上操作, 建议商户对参数进行加签
 
-## 请求格式
+### 请求格式
 
 不同接口请求参数不同,但所有请求参数中都应含有 sign 字段
 
-## 响应格式
+### 响应格式
 
 import Table from "@components/Table.astro";
 
 <Table
   thead={["字段", "类型", "必需", "描述"]}
   tbody={[
-    ["code", "int", "是", "状态码"],
-    ["msg", "string", "是", "返回信息"],
-    ["data", "object", "否", "返回数据"],
+    [
+      "Context-Type",
+      "application/json",
+      "yes",
+      "固定值.所有请求参数必须为POST, 数据都必须放在body中",
+    ],
+    ["appCode", "String", "yes", "分配给商户应用的code"],
+    ["country", "String", "yes", "MX-墨西哥"],
+    ["nonce", "String", "yes", "必须为32位不重复字符串"],
+    ["timestamp", "String", "yes", "当前时间戳(毫秒)"],
+  ]}
+/>
+
+### 响应格式
+
+<Table
+  thead={["字段", "类型", "必需", "描述"]}
+  tbody={[
+    ["code", "int", "yes", "状态码"],
+    ["msg", "String", "yes", "返回信息"],
+    ["data", "Object", "no", "返回数据"],
   ]}
 />
