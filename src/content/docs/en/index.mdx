@@ -18,7 +18,7 @@ hero:
     file: /src/assets/teemo.png
   actions:
     - text: Get started
-      link: /en/guides/example
+      link: /en/introduction
       icon: right-arrow
       variant: primary
     - text: Business
@@ -26,21 +26,20 @@ hero:
       icon: external
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
-import SpeedInsights from "@vercel/speed-insights/astro";
+import { Card, CardGrid } from "@astrojs/starlight/components";
 
 <CardGrid stagger>
-    <Card title="Quick and Easy" icon="add-document">
-        Easy-to-use API interface allows you to easily complete the payment process
-    </Card>
-    <Card title="Stable Service" icon="setting">
-        Adopts advanced distributed technology to support high-concurrency payment requests
-    </Card>
-    <Card title="Customer Service" icon="open-book">
-        24/7 stable customer service to make your payment process smoother
-    </Card>
-    <Card title="Documentation" icon="pencil">
-        Written and maintained by product managers and developers together
-    </Card>
+  <Card title="Quick and Easy" icon="add-document">
+    Easy-to-use API interface allows you to easily complete the payment process
+  </Card>
+  <Card title="Stable Service" icon="setting">
+    Adopts advanced distributed technology to support high-concurrency payment
+    requests
+  </Card>
+  <Card title="Customer Service" icon="open-book">
+    24/7 stable customer service to make your payment process smoother
+  </Card>
+  <Card title="Documentation" icon="pencil">
+    Written and maintained by product managers and developers together
+  </Card>
 </CardGrid>
-<SpeedInsights />

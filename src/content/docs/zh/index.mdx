@@ -18,7 +18,7 @@ hero:
     file: /src/assets/teemo.png
   actions:
     - text: 开始接入
-      link: /zh/guides/example
+      link: /zh/introduction
       icon: right-arrow
       variant: primary
     - text: 开通商户
@@ -26,21 +26,19 @@ hero:
       icon: external
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
-import SpeedInsights from "@vercel/speed-insights/astro";
+import { Card, CardGrid } from "@astrojs/starlight/components";
 
 <CardGrid stagger>
-	<Card title="快速便捷" icon="add-document">
-        简单易用的API接口，让您可以轻松完成支付流程
-	</Card>
-	<Card title="服务稳定" icon="setting">
-        采用了先进的分布式技术，可以支持大并发量的支付请求
-	</Card>
-	<Card title="客户服务" icon="open-book">
-        7x24 小时稳定的客户服务，让您的支付流程更加顺畅
-	</Card>
-    <Card title="文档编撰" icon="pencil">
-        由产品经理和开发人员共同编撰和维护
-    </Card>
+  <Card title="快速便捷" icon="add-document">
+    简单易用的API接口，让您可以轻松完成支付流程
+  </Card>
+  <Card title="服务稳定" icon="setting">
+    采用了先进的分布式技术，可以支持大并发量的支付请求
+  </Card>
+  <Card title="客户服务" icon="open-book">
+    7x24 小时稳定的客户服务，让您的支付流程更加顺畅
+  </Card>
+  <Card title="文档编撰" icon="pencil">
+    由产品经理和开发人员共同编撰和维护
+  </Card>
 </CardGrid>
-<SpeedInsights />
