@@ -12,10 +12,15 @@ import Table from "@components/Table.astro";
 
 ### 请求参数
 
-无
+<Table
+  thead={["字段", "类型", "必需", "描述"]}
+  tbody={[["sign", "String", "yes", "签名"]]}
+/>
 
 ```json title=请求示例
-{}
+{
+  "sign": "YOUR_SIGN"
+}
 ```
 
 ### 返回参数
