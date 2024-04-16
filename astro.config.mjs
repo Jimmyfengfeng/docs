@@ -16,6 +16,11 @@ export default defineConfig({
             type: "image/png",
             href: "/favicon.png",
           }, // 网站图标
+          tag: "link",
+          attrs: {
+            rel: "sitemap",
+            href: "/sitemap-index.xml",
+          },
         },
       ],
       // 网站左上角标题和右侧 GitHub 链接
