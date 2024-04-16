@@ -2,3 +2,37 @@
 title: 余额查询
 description: 余额查询
 ---
+
+import ReqAddr from "@components/ReqAddr.astro";
+import Table from "@components/Table.astro";
+
+### 请求地址
+
+<ReqAddr method="POST" url="/api/pay/merchant/balance" />
+
+### 请求参数
+
+无
+
+```json title=请求示例
+{}
+```
+
+### 返回参数
+
+<Table
+  thead={["字段", "类型", "必需", "描述"]}
+  tbody={[
+    ["totalAmount", "String", "yes", "总金额"],
+    ["frozenAmount", "String", "yes", "冻结金额"],
+    ["availAmount", "String", "yes", "可用金额"],
+  ]}
+/>
+
+```json title=返回示例
+{
+  "totalAmount": "1009962.02",
+  "frozenAmount": "33161.7",
+  "availAmount": "976800.32"
+}
+```
