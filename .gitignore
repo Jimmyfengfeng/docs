@@ -4,6 +4,8 @@
 
 # build output
 dist/
+public/*.xml
+
 # generated types
 .astro/
 

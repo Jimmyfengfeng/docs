@@ -11,16 +11,11 @@ export default defineConfig({
       head: [
         {
           tag: "link",
-          attrs: {
-            rel: "icon",
-            type: "image/png",
-            href: "/favicon.png",
-          }, // 网站图标
+          attrs: { rel: "icon", type: "image/png", href: "/favicon.png" },
+        },
+        {
           tag: "link",
-          attrs: {
-            rel: "sitemap",
-            href: "/sitemap-index.xml",
-          },
+          attrs: { rel: "sitemap", href: "/sitemap-index.xml" },
         },
       ],
       // 网站左上角标题和右侧 GitHub 链接
