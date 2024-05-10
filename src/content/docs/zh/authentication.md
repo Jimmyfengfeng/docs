@@ -30,31 +30,18 @@ description: 鉴权和加密说明
 
 ### 请求头
 
-import Table from "@components/Table.astro";
-
-<Table
-  thead={["字段", "类型", "必需", "描述"]}
-  tbody={[
-    [
-      "Context-Type",
-      "application/json",
-      "yes",
-      "固定值.所有请求参数必须为POST, 数据都必须放在body中",
-    ],
-    ["appCode", "String", "yes", "分配给商户应用的code"],
-    ["country", "String", "yes", "MX-墨西哥"],
-    ["nonce", "String", "yes", "必须为32位不重复字符串"],
-    ["timestamp", "String", "yes", "当前时间戳(毫秒)"],
-  ]}
-/>
+| 字段         | 类型             | 必需 | 长度                                                   | 签名                     |
+| ------------ | ---------------- | ---- | ------------------------------------------------------ | ------------------------ |
+| Context-Type | application/json | yes  | 固定值.所有请求参数必须为 POST, 数据都必须放在 body 中 |
+| appCode      | String           | yes  | 32                                                     | 分配给商户应用的 code    |
+| country      | String           | yes  | 2                                                      | MX-墨西哥                |
+| nonce        | String           | yes  | 32                                                     | 必须为 32 位不重复字符串 |
+| timestamp    | String           | yes  | 13                                                     | 当前时间戳(毫秒)         |
 
 ### 响应格式
 
-<Table
-  thead={["字段", "类型", "必需", "描述"]}
-  tbody={[
-    ["code", "int", "yes", "状态码"],
-    ["msg", "String", "yes", "返回信息"],
-    ["data", "Object", "no", "返回数据"],
-  ]}
-/>
+| 字段 | 类型   | 必需 | 描述     |
+| ---- | ------ | ---- | -------- |
+| code | int    | yes  | 状态码   |
+| msg  | String | yes  | 返回信息 |
+| data | Object | no   | 返回数据 |
