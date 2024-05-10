@@ -1,6 +1,7 @@
 # ides
 .vscode
 .idea
+.obsidian
 
 # build output
 dist/

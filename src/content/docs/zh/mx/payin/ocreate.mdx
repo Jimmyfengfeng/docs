@@ -16,22 +16,51 @@ import Table from "@components/Table.astro";
   thead={["字段", "类型", "必需", "描述"]}
   tbody={[
     ["merchantOrderNo", "String", "yes", "商户订单号(Max leng 32)"],
-    ["paymentType", "int", "yes", "支付方式: 1-还款码 2-收银台"],
+    [
+      "paymentType",
+      "int",
+      "yes",
+      "支付方式: 1-还款码 2-收银台 3-BankTransfer（线上收款单次） 4-PayCashOnce（线下收款单次） 5-PayCashRecurrent（线下多次）",
+    ],
     ["amount", "String", "yes", "代收金额(比索)"],
+    [
+      "expirationTime",
+      "Long",
+      "no",
+      "过期时间，例：1717048800000，当 paymentType 为 2、4、5 时必传",
+    ],
+    ["realName", "String", "no", "用户姓名，全大写、无特殊字符"],
+    ["email", "String", "no", "邮箱"],
+    ["phone", "String", "no", "手机号"],
     ["callbackUrl", "String", "no", "代付回调地址，若不传, 则以商户配置为准"],
     ["remark", "String", "no", "订单备注"],
     ["sign", "String", "yes", "签名"],
   ]}
 />
 
-```json title=请求示例
+```json title="请求示例（当 paymentType 为 1、3 时）"
 {
   "merchantOrderNo": "201806251011",
   "paymentType": 1,
   "amount": "100",
+  "expirationTime": 1717048800000,
   "callbackUrl": "https://merchant.com/api/payment/callback",
   "remark": "代收备注",
   "sign": "YOUR_SIGN"
+}
+```
+
+```json title="请求示例（当 paymentType 为 2、4、5 时）"
+{
+  "merchantOrderNo": "TC2404240001RAinLBYnm7",
+  "realName": "USERNAME",
+  "amount": "20",
+  "callbackUrl": "https://merchant.com/api/payment/callback",
+  "paymentType": 5,
+  "email": "user@gmail.com",
+  "phone": "999999999",
+  "sign": "YOUR_SIGN",
+  "expirationTime": 1717048800000
 }
 ```
 
