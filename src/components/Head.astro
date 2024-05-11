@@ -1,12 +1,8 @@
 ---
 import type { Props } from "@astrojs/starlight/props";
-import StarlightHead from "@astrojs/starlight/components/Head.astro";
-import VtbotStarlight from "astro-vtbot/components/starlight/Base.astro";
+import Default from "@astrojs/starlight/components/Head.astro";
 import LoadingIndicator from "astro-loading-indicator/component";
 ---
 
-<!-- transition:animate='initial' | 'slide' | 'fade' | 'none' -->
-<VtbotStarlight {...Astro.props} transition:animate="fade">
-  <LoadingIndicator color="#80B1BB" height="3px" animationDuration={500} />
-  <StarlightHead {...Astro.props}><slot /></StarlightHead>
-</VtbotStarlight>
+<Default {...Astro.props}><slot /></Default>
+<LoadingIndicator color="#80B1BB" height="3px" animationDuration={500} />

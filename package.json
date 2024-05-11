@@ -18,7 +18,6 @@
     "@vercel/speed-insights": "^1.0.10",
     "astro": "^4.5.10",
     "astro-loading-indicator": "^0.4.0",
-    "astro-vtbot": "^1.7.16",
     "sharp": "^0.32.6",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.3"

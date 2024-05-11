@@ -173,7 +173,7 @@ export default defineConfig({
       ],
       // 重新组件
       components: {
-        Head: "./src/components/Head.astro",
+        // Head: "./src/components/Head.astro",
         ContentPanel: "/src/components/ContentPanel.astro",
       },
       customCss: ["./src/tailwind.css"],
